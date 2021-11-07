@@ -15,4 +15,4 @@ WORKDIR /home/ci
 
 # register AUR as known host
 RUN mkdir /home/ci/.ssh
-RUN echo "aur.archlinux.org,2a01:4f9:c010:50::1 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLMiLrP8pVi5BFX2i3vepSUnpedeiewE5XptnUnau+ZoeUOPkpoCgZZuYfpaIQfhhJJI5qgnjJmr4hyJbe/zxow=" > /home/ci/.ssh/known_hosts
+RUN ssh-keyscan aur.archlinux.org > /home/ci/.ssh/known_hosts
